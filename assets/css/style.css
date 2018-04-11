@@ -1,0 +1,215 @@
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro");
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+  background-color: #4897d8; }
+
+.titre {
+  display: block;
+  margin: 0 auto;
+  text-transform: uppercase;
+  margin-top: 30px;
+  color: #A10000; }
+  .titre h1, .titre h2 {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  .titre h1 {
+    font-size: 60px; }
+  .titre h2 {
+    font-size: 40px; }
+
+.content {
+  background-color: beige;
+  display: block;
+  margin: 0 auto; }
+
+/* STYLE NAVBAR */
+nav {
+  display: block;
+  position: fixed;
+  width: 600px;
+  height: 600px;
+  user-select: none;
+  transform: translate3d(25px, -25px, 0);
+  transition: transform 0.5s cubic-bezier(0.3, 1.4, 0.5, 0.9); }
+  nav.open {
+    transform: translate3d(0, 0, 0); }
+  nav.top-left {
+    top: -190px;
+    left: -225px; }
+
+.disc {
+  position: absolute;
+  display: inline-block;
+  text-align: center;
+  cursor: pointer;
+  font: 25px "Source Sans Pro", sans-serif;
+  line-height: 40px;
+  padding-top: 10px;
+  border-radius: 300px;
+  transform: scale3d(0.5, 0.5, 0.5) rotate3d(0, 0, 1, 173deg);
+  pointer-events: none;
+  opacity: 0;
+  cursor: pointer;
+  transition: transform 0.5s cubic-bezier(0.3, 1.4, 0.5, 0.9), opacity 0.5s; }
+  .disc div {
+    transform: rotate(180deg); }
+  .open .disc {
+    pointer-events: auto;
+    opacity: 1; }
+
+.l1 {
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  background: #fa6e59;
+  transition-delay: 0s; }
+  .open .l1 {
+    transition-delay: 0s;
+    transform: scale3d(1, 1, 1) rotate3d(0, 0, 1, 173deg);
+    opacity: 1; }
+    .open .l1:hover {
+      background: shade(#fa6e59, 90%);
+      color: inherit;
+      transition-delay: 0s;
+      font-weight: bold; }
+    .open .l1:active {
+      background: shade(#fa6e59, 50%);
+      color: #fa6e59; }
+    .open .l1.toggle {
+      transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -7deg); }
+
+.l2 {
+  top: 50px;
+  left: 50px;
+  right: 50px;
+  bottom: 50px;
+  background: #fb805a;
+  transition-delay: 0.0833333333s; }
+  .open .l2 {
+    transition-delay: 0.0833333333s;
+    transform: scale3d(1, 1, 1) rotate3d(0, 0, 1, 173deg);
+    opacity: 1; }
+    .open .l2:hover {
+      background: shade(#fb805a, 90%);
+      color: inherit;
+      transition-delay: 0s;
+      font-weight: bold; }
+    .open .l2:active {
+      background: shade(#fb805a, 50%);
+      color: #fb805a; }
+    .open .l2.toggle {
+      transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -7deg); }
+
+.l3 {
+  top: 100px;
+  left: 100px;
+  right: 100px;
+  bottom: 100px;
+  background: #fc925a;
+  transition-delay: 0.1666666667s; }
+  .open .l3 {
+    transition-delay: 0.1666666667s;
+    transform: scale3d(1, 1, 1) rotate3d(0, 0, 1, 173deg);
+    opacity: 1; }
+    .open .l3:hover {
+      background: shade(#fc925a, 90%);
+      color: inherit;
+      transition-delay: 0s;
+      font-weight: bold; }
+    .open .l3:active {
+      background: shade(#fc925a, 50%);
+      color: #fc925a; }
+    .open .l3.toggle {
+      transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -7deg); }
+
+.l4 {
+  top: 150px;
+  left: 150px;
+  right: 150px;
+  bottom: 150px;
+  background: #fda55b;
+  transition-delay: 0.25s; }
+  .open .l4 {
+    transition-delay: 0.25s;
+    transform: scale3d(1, 1, 1) rotate3d(0, 0, 1, 173deg);
+    opacity: 1; }
+    .open .l4:hover {
+      background: shade(#fda55b, 90%);
+      color: inherit;
+      transition-delay: 0s;
+      font-weight: bold; }
+    .open .l4:active {
+      background: shade(#fda55b, 50%);
+      color: #fda55b; }
+    .open .l4.toggle {
+      transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -7deg); }
+
+.l5 {
+  top: 200px;
+  left: 200px;
+  right: 200px;
+  bottom: 200px;
+  background: #fdb75b;
+  transition-delay: 0.3333333333s; }
+  .open .l5 {
+    transition-delay: 0.3333333333s;
+    transform: scale3d(1, 1, 1) rotate3d(0, 0, 1, 173deg);
+    opacity: 1; }
+    .open .l5:hover {
+      background: shade(#fdb75b, 90%);
+      color: inherit;
+      transition-delay: 0s;
+      font-weight: bold; }
+    .open .l5:active {
+      background: shade(#fdb75b, 50%);
+      color: #fdb75b; }
+    .open .l5.toggle {
+      transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -7deg); }
+
+.l6 {
+  top: 250px;
+  left: 250px;
+  right: 250px;
+  bottom: 250px;
+  background: #fec95c;
+  transition-delay: 0.4166666667s; }
+  .open .l6 {
+    transition-delay: 0.4166666667s;
+    transform: scale3d(1, 1, 1) rotate3d(0, 0, 1, 173deg);
+    opacity: 1; }
+    .open .l6:hover {
+      background: shade(#fec95c, 90%);
+      color: inherit;
+      transition-delay: 0s;
+      font-weight: bold; }
+    .open .l6:active {
+      background: shade(#fec95c, 50%);
+      color: #fec95c; }
+    .open .l6.toggle {
+      transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -7deg); }
+
+.toggle {
+  line-height: 100px;
+  padding: 0;
+  width: 100px;
+  background: #ffdb5c;
+  opacity: 1;
+  transform: none;
+  pointer-events: auto;
+  transition-delay: 0s; }
+  .open .toggle {
+    transform: rotate3d(0, 0, 1, 0deg); }
+  .toggle:hover {
+    background: shade(#ffdb5c, 90%);
+    color: inherit;
+    font-weight: bold; }
+  .toggle:active {
+    background: shade(#ffdb5c, 50%);
+    color: rgba(255, 219, 92, 0.5);
+    transform: scale(0.9);
+    transition-duration: 0s; }
+
+/*# sourceMappingURL=style.css.map */
