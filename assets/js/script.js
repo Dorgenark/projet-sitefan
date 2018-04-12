@@ -16,3 +16,9 @@ toggle.addEventListener('click', function() {
 setTimeout(function(){
 	nav.classList.toggle('open');	
 }, 150);
+
+
+
+$(".l5").click(function(){
+	window.location.href = "index.html";
+})
