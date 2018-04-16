@@ -27,6 +27,25 @@ body {
   justify-content: center;
   font-size: 30px; }
 
+.submenu {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  justify-content: space-around; }
+  .submenu p {
+    background-color: #A10000;
+    color: beige;
+    padding: 10px 15px;
+    border: 1px solid beige;
+    border-radius: 1px;
+    font-size: 135%;
+    font-weight: bold; }
+
+.text {
+  margin: 40px;
+  line-height: 1.5;
+  font-size: 110%; }
+
 .s1, .s2 {
   display: block;
   margin: 0 auto;
@@ -57,7 +76,10 @@ body {
     margin-top: 50%; }
 
   .top-left {
-    margin-left: 30vw; } }
+    margin-left: 30vw; }
+
+  .text {
+    margin: 10px; } }
 @media screen and (max-width: 400px) {
   .titre {
     margin-top: 75%; }
