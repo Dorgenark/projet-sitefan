@@ -26,23 +26,36 @@ $(".l5").click(function(){
 	window.location.href = "index.html";
 });
 
+$(".l4").click(function(){
+	window.location.href = "bio.html";
+});
+
+$(".l3").click(function(){
+	window.location.href = "photos.html";
+});
+
+$(".l2").click(function(){
+	window.location.href = "goodies.html";
+});
+
+$(".l1").click(function(){
+	window.location.href = "contact.html";
+});
+
 
 
 // PRESENTATION TEXT DISPLAY
 $(".submenu").on("click", "#textcomics-btn", function(){
 	$("#textcomics").show(400);
-	$("#textfilms").hide(300);
-	$("#textgames").hide(300);
+	$("#textfilms, #textgames").hide(300);
 });
 
 $(".submenu").on("click", "#textfilms-btn", function(){
-	$("#textcomics").hide(300);
 	$("#textfilms").show(400);
-	$("#textgames").hide(300);
+	$("#textcomics, #textgames").hide(300);
 });
 
 $(".submenu").on("click", "#textgames-btn", function(){
-	$("#textcomics").hide(300);
-	$("#textfilms").hide(300);
 	$("#textgames").show(400);
+	$("#textcomics, #textfilms").hide(300);
 });
