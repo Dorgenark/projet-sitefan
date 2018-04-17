@@ -19,7 +19,11 @@ body {
 		align-items: center;
 	}
 	h1 {
-		font-size: 70px;	
+		font-size: 70px;
+		a {
+			color: #A10000;
+			text-decoration: none;
+		}	
 	}
 	h2 {
 		font-size: 40px;
@@ -44,7 +48,7 @@ body {
 	display: flex;
 	justify-content: space-around;
 	p {
-		background-color: #A10000;
+		background-color: #C72734;
 		color: beige;
 		padding: 10px 15px;
 		border: 1px solid beige;
