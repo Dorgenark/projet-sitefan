@@ -20,9 +20,10 @@ body {
   .titre h2 {
     font-size: 40px; }
 
-.soustitre h2 {
+.content h2 {
+  color: #A10000; }
+.content .soustitre h2 {
   text-transform: uppercase;
-  color: #A10000;
   display: flex;
   justify-content: center;
   font-size: 30px; }
@@ -63,6 +64,31 @@ body {
 
 .content {
   margin: 20px; }
+
+.bio {
+  margin: 0 5%;
+  margin-bottom: 5%; }
+  .bio .soustitre h2 {
+    margin-bottom: 5%;
+    margin-left: 0; }
+  .bio .spoiler, .bio .spoiler-btn, .bio h2 {
+    margin-left: 5%; }
+  .bio .spoiler {
+    display: none;
+    width: 100%;
+    background-color: white;
+    margin: 10px; }
+  .bio .spoiler-btn {
+    display: table;
+    position: relative;
+    z-index: 10;
+    text-decoration: none;
+    border-radius: 2px;
+    background-color: #C72734;
+    color: beige;
+    padding: 7px;
+    margin-bottom: 5%;
+    margin-left: 6%; }
 
 @media screen and (max-width: 750px) {
   .titre {

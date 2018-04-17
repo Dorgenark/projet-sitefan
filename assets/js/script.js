@@ -6,13 +6,13 @@ toggle_close_text = '&#8599;';
 
 toggle.addEventListener('click', function() {
 	nav.classList.toggle('open');
-	$(".submenu").css("position", "inherit");
+	$(".submenu, .spoiler-btn").css("position", "inherit");
 	
 	if (nav.classList.contains('open')) {
 		toggle.innerHTML = toggle_close_text;
 	} else {
 		toggle.innerHTML = toggle_open_text;
-		$(".submenu").css("position", "relative");
+		$(".submenu, .spoiler-btn").css("position", "relative");
 	}
 }, false);
 
@@ -41,4 +41,13 @@ $(".submenu").on("click", "#textfilms-btn", function(){
 $(".submenu").on("click", "#textgames-btn", function(){
 	$("#textgames").show(400);
 	$("#textcomics, #textfilms").hide(300);
+});
+
+
+
+// BIO TEXT SPOILERS
+$(".spoiler-btn").click(function(e){
+    e.preventDefault()
+    var foo=$(this).attr('href')
+    $('#'+foo).slideToggle(500);
 });
