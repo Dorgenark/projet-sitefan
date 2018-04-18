@@ -51,3 +51,57 @@ $(".spoiler-btn").click(function(e){
     var foo=$(this).attr('href')
     $('#'+foo).slideToggle(500);
 });
+
+
+
+// CONTACT
+var form = $('#contact'),
+    submit = form.find('[name="submit"]');
+
+form.on('submit', function(e) {
+  e.preventDefault();
+  
+  // avoid spamming buttons
+  if (submit.attr('value') !== 'Envoi')
+    return;
+  
+  var valid = true;
+  form.find('input, textarea').removeClass('invalid').each(function() {
+    if (!this.value) {
+      $(this).addClass('invalid');
+      valid = false;
+    }
+  });
+  
+  if (!valid) {
+    form.animate({left: '-3em'},  50)
+        .animate({left:  '3em'}, 100)
+        .animate({left:    '0'},  50);
+  } else {
+    submit.attr('value', 'En cours...')
+          .css({boxShadow: '0 0 200em 200em rgba(225, 225, 225, 0.6)',
+                backgroundColor: '#ccc'});
+    // simulate AJAX response
+    setTimeout(function() {
+      // step 1: slide labels and inputs
+      // when AJAX responds with success
+      // no animation for AJAX failure yet
+      form.find('label')
+          .animate({opacity: '0'}, 500);
+    }, 1000);
+    setTimeout(function() {
+      // step 2: show thank you message after step 1
+      submit.attr('value', 'Envoyé !')
+            .css({boxShadow: 'none'});
+    }, 2000);
+    setTimeout(function() {
+      // step 3: reset
+      form.find('input, textarea').val('');
+      form.find('label')
+          .css({left: '0'})
+          .animate({opacity: '1'}, 500);
+      submit.attr('value', 'Envoi')
+            .css({backgroundColor: ''});
+    }, 4000);
+  }
+});

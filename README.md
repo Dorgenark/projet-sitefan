@@ -5,3 +5,4 @@ Par Simon Romainville
 
 
 Concept menu: [Bennett Feely](https://codepen.io/bennettfeely/pen/qRJOZJ)
+Galerie d'images: [George W. Park](https://codepen.io/GeorgePark/pen/vdqYom)
